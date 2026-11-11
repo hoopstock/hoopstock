@@ -15,15 +15,26 @@
     display: flex; flex-direction: column; align-items: center;
     padding: 40px 20px;
   }
+  /* --- animated basketball background layer --- */
+  .bglayer { position: fixed; inset: 0; overflow: hidden; pointer-events: none; z-index: 0; }
+  .ball { position: absolute; opacity: .13; animation: drift 40s ease-in-out infinite alternate; }
+  .ball svg { width: 100%; height: 100%; display: block; animation: spin 70s linear infinite; }
+  .b1 { width: 320px; height: 320px; left: -70px; top: 8%; animation-duration: 38s; }
+  .b2 { width: 180px; height: 180px; right: -40px; top: 55%; animation-duration: 30s; }
+  .b3 { width: 130px; height: 130px; left: 16%; bottom: -40px; animation-duration: 46s; opacity: .11; }
+  @keyframes drift { from { transform: translateY(0); } to { transform: translateY(-50px); } }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  @media (prefers-reduced-motion: reduce) { .ball { animation: none; } .ball svg { animation: none; } }
+  body > :not(.bglayer) { position: relative; z-index: 1; }
   .hero {
     background: #fff;
     border-radius: 24px;
-    padding: 16px 24px;
+    padding: 14px 22px;
     margin-bottom: 18px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, .35);
     display: flex; justify-content: center; align-items: center;
   }
-  .logo { width: 220px; max-width: 70vw; display: block; }
+  .logo { width: 240px; max-width: 76vw; display: block; }
   h1 { font-size: 1.6rem; margin-bottom: 4px; text-align: center; }
   .tagline { color: #94a3b8; font-size: .95rem; margin-bottom: 32px; text-align: center; }
   .links { width: 100%; max-width: 420px; display: flex; flex-direction: column; gap: 14px; }
@@ -49,17 +60,43 @@
 </style>
 </head>
 <body>
+  <div class="bglayer" aria-hidden="true">
+    <div class="ball b1"><svg viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="48" fill="#f97316"/>
+      <circle cx="50" cy="50" r="48" fill="none" stroke="#9a3412" stroke-width="3"/>
+      <line x1="2" y1="50" x2="98" y2="50" stroke="#9a3412" stroke-width="3"/>
+      <line x1="50" y1="2" x2="50" y2="98" stroke="#9a3412" stroke-width="3"/>
+      <path d="M50 2 C 20 20, 20 80, 50 98" fill="none" stroke="#9a3412" stroke-width="3"/>
+      <path d="M50 2 C 80 20, 80 80, 50 98" fill="none" stroke="#9a3412" stroke-width="3"/>
+    </svg></div>
+    <div class="ball b2"><svg viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="48" fill="#f97316"/>
+      <circle cx="50" cy="50" r="48" fill="none" stroke="#9a3412" stroke-width="3"/>
+      <line x1="2" y1="50" x2="98" y2="50" stroke="#9a3412" stroke-width="3"/>
+      <line x1="50" y1="2" x2="50" y2="98" stroke="#9a3412" stroke-width="3"/>
+      <path d="M50 2 C 20 20, 20 80, 50 98" fill="none" stroke="#9a3412" stroke-width="3"/>
+      <path d="M50 2 C 80 20, 80 80, 50 98" fill="none" stroke="#9a3412" stroke-width="3"/>
+    </svg></div>
+    <div class="ball b3"><svg viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="48" fill="#f97316"/>
+      <circle cx="50" cy="50" r="48" fill="none" stroke="#9a3412" stroke-width="3"/>
+      <line x1="2" y1="50" x2="98" y2="50" stroke="#9a3412" stroke-width="3"/>
+      <line x1="50" y1="2" x2="50" y2="98" stroke="#9a3412" stroke-width="3"/>
+      <path d="M50 2 C 20 20, 20 80, 50 98" fill="none" stroke="#9a3412" stroke-width="3"/>
+      <path d="M50 2 C 80 20, 80 80, 50 98" fill="none" stroke="#9a3412" stroke-width="3"/>
+    </svg></div>
+  </div>
   <div class="hero"><img class="logo" src="hoopstock-logo.png" alt="HoopStock Elite logo"></div>
   <h1>HoopStock Elite</h1>
   <p class="tagline">Official contact &amp; social channels</p>
   <div class="links">
-    <a class="card" href="https://www.facebook.com/hoopstockelitev3">
-      <span class="icon-box"><img class="icon" src="facebook.png" alt="Facebook"></span>
-      <span><span class="label">Facebook Page (Active)</span><br><span class="value">HoopStock Elite v3</span></span>
-    </a>
     <a class="card" href="https://t.me/HoopStock">
       <span class="icon-box"><img class="icon" src="telegram.png" alt="Telegram"></span>
       <span><span class="label">Telegram Channel</span><br><span class="value">@HoopStock</span></span>
+    </a>
+    <a class="card" href="https://www.facebook.com/hoopstockelitev3">
+      <span class="icon-box"><img class="icon" src="facebook.png" alt="Facebook"></span>
+      <span><span class="label">Facebook Page (Active)</span><br><span class="value">HoopStock Elite v3</span></span>
     </a>
     <a class="card" href="https://www.facebook.com/hoopstockelite">
       <span class="icon-box"><img class="icon" src="facebook.png" alt="Facebook"></span>
