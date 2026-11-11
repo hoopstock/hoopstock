@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HoopStock Elite — Official Links</title>
+<style>
+  :root { --orange: #f97316; --bg: #0f172a; --card: #1e293b; --text: #e2e8f0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(160deg, #0f172a 0%, #1e1b4b 100%);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex; flex-direction: column; align-items: center;
+    padding: 40px 20px;
+  }
+  .avatar {
+    width: 88px; height: 88px; border-radius: 50%;
+    background: linear-gradient(135deg, #f97316, #ef4444);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 40px; margin-bottom: 16px;
+    box-shadow: 0 8px 24px rgba(249,115,22,.35);
+  }
+  h1 { font-size: 1.6rem; margin-bottom: 4px; text-align: center; }
+  .tagline { color: #94a3b8; font-size: .95rem; margin-bottom: 32px; text-align: center; }
+  .links { width: 100%; max-width: 420px; display: flex; flex-direction: column; gap: 14px; }
+  a.card {
+    display: flex; align-items: center; gap: 14px;
+    background: var(--card);
+    border: 1px solid #334155;
+    border-radius: 16px;
+    padding: 16px 18px;
+    text-decoration: none; color: var(--text);
+    transition: transform .15s ease, border-color .15s ease;
+  }
+  a.card:hover, a.card:active { transform: translateY(-2px); border-color: var(--orange); }
+  .icon { font-size: 26px; }
+  .label { font-size: .8rem; color: #94a3b8; }
+  .value { font-size: 1rem; font-weight: 600; }
+  .footer { margin-top: 36px; color: #64748b; font-size: .8rem; text-align: center; }
+</style>
+</head>
+<body>
+  <div class="avatar">🏀</div>
+  <h1>HoopStock Elite</h1>
+  <p class="tagline">Official contact &amp; social channels</p>
+  <div class="links">
+    <a class="card" href="https://www.facebook.com/hoopstockelitev3">
+      <span class="icon">📘</span>
+      <span><span class="label">Facebook Page (Active)</span><br><span class="value">HoopStock Elite v3</span></span>
+    </a>
+    <a class="card" href="https://t.me/HoopStock">
+      <span class="icon">✈️</span>
+      <span><span class="label">Telegram Channel</span><br><span class="value">@HoopStock</span></span>
+    </a>
+    <a class="card" href="https://www.facebook.com/hoopstockelite">
+      <span class="icon">📘</span>
+      <span><span class="label">Facebook Page v1</span><br><span class="value">HoopStock Elite</span></span>
+    </a>
+    <a class="card" href="https://www.facebook.com/HoopStockEliteRevamp">
+      <span class="icon">📘</span>
+      <span><span class="label">Facebook Page (Revamp)</span><br><span class="value">HoopStock Elite Revamp</span></span>
+    </a>
+    <a class="card" href="mailto:hoopstockelite@gmail.com">
+      <span class="icon">✉️</span>
+      <span><span class="label">Email</span><br><span class="value">hoopstockelite@gmail.com</span></span>
+    </a>
+  </div>
+  <p class="footer">© HoopStock Elite</p>
+</body>
+</html>
